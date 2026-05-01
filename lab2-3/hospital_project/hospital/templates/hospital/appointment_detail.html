@@ -1,0 +1,13 @@
+{% extends 'hospital/base.html' %}
+
+{% block content %}
+<h2>Appointment Details</h2>
+
+<p><strong>Patient:</strong> {{ appointment.patient_name }}</p>
+<p><strong>Date:</strong> {{ appointment.appointment_date }}</p>
+<p><strong>Doctor:</strong> {{ appointment.doctor.full_name }}</p>
+<p><strong>Diagnosis:</strong> {{ appointment.diagnosis }}</p>
+<p><strong>Notes:</strong> {{ appointment.notes }}</p>
+
+<a href="/appointments/">Back</a>
+{% endblock %}
