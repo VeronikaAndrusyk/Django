@@ -1,0 +1,9 @@
+<h1>Doctors list</h1>
+
+{% for doctor in doctors %}
+    <p>
+        {{ doctor.full_name }} — {{ doctor.specialization }}
+    </p>
+{% empty %}
+    <p>No doctors yet</p>
+{% endfor %}

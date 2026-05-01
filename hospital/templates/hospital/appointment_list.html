@@ -1,0 +1,26 @@
+{% extends 'hospital/base.html' %}
+
+{% block content %}
+<h2>Appointments</h2>
+
+<form method="get">
+    <input type="text" name="diagnosis" placeholder="Search diagnosis">
+    <button type="submit">Filter</button>
+</form>
+
+<ul>
+    {% for appointment in appointments %}
+        <li>
+            <a href="/appointments/{{ appointment.id }}/">
+                {{ appointment.patient_name }}
+            </a>
+            |
+            {{ appointment.appointment_date }}
+            |
+            {{ appointment.doctor.full_name }}
+            |
+            {{ appointment.diagnosis }}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

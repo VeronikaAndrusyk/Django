@@ -1,0 +1,12 @@
+<h2>Appointments</h2>
+
+<a href="/appointments/add/">Add Appointment</a>
+
+<ul>
+  {% for app in appointments %}
+    <li>
+      {{ app.patient_name }} → {{ app.doctor.name }}
+      <a href="/appointments/edit/{{ app.id }}/">Edit</a>
+    </li>
+  {% endfor %}
+</ul>

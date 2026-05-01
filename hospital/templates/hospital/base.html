@@ -1,0 +1,41 @@
+base.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hospital System</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+        }
+
+        nav {
+            background: #007bff;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            margin-right: 20px;
+            text-decoration: none;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/appointments/">Appointments</a>
+    <a href="/doctors/">Doctors</a>
+</nav>
+
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>
